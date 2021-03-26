@@ -67,7 +67,7 @@ def meme_post():
 
     r = requests.get(path)
 
-    if '.png' in path.lower(): 
+    if '.png' in path.lower():
         ext = '.png'
     elif 'jpg' in path.lower():
         ext = '.jpg'
