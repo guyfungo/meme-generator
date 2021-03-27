@@ -7,7 +7,7 @@ from flask import Flask, render_template, abort, request
 from QuoteEngine import Ingestor
 from MemeGenerator import MemeEngine
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 meme = MemeEngine('./static')
 
 
@@ -44,6 +44,7 @@ def meme_rand():
     img = random.choice(imgs)
     quote = random.choice(quotes)
     path = meme.make_meme(img, quote.body, quote.author)
+    path = path[1:]
     return render_template('meme.html', path=path)
 
 
