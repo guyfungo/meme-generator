@@ -19,7 +19,7 @@ class PDFIngestor(IngestorInterface):
         if not cls.can_ingest(path):
             raise Exception('Cannot ingest exception.')
 
-        quotes = []        
+        quotes = []
         tmp_file = f'./tmp/{uuid4()}.txt'
         cmd = r"""{} -layout "{}" "{}" """.format(
             r'./xpdf/bin64/pdftotext.exe', path, tmp_file)

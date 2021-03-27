@@ -1,5 +1,5 @@
 import os
-import random 
+import random
 from typing import List
 from PIL import Image, ImageDraw, ImageFont
 from uuid import uuid4

@@ -75,12 +75,15 @@ def meme_post():
     elif 'jpeg' in path.lower():
         ext = '.jpeg'
 
+    print(path)
+
     tmp = f'./tmp/{uuid4()}{ext}'
     img = open(tmp, 'wb').write(r.content)
     path = meme.make_meme(tmp, body, author)
+    new_path = path[1:]
     os.remove(tmp)
 
-    return render_template('meme.html', path=path)
+    return render_template('meme.html', path=new_path)
 
 
 if __name__ == "__main__":
