@@ -1,2 +1,5 @@
 /.vscode
 /__MACOSX
+src/MemeGenerator/__pycache__/MemeEngine.cpython-39.pyc
+src/QuoteEngine/__pycache__/PDFIngestor.cpython-39.pyc
+src/MemeGenerator/__pycache__/MemeEngine.cpython-39.pyc
